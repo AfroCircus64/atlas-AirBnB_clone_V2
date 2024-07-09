@@ -63,6 +63,10 @@ class FileStorage:
         except FileNotFoundError:
             pass
 
+    def close(self):
+        """deserialize the JSON file"""
+        self.reload()
+
     @property
     def reviews(self):
         """Getter attribute for reviews related to this Place instance."""
